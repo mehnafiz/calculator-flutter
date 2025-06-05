@@ -46,7 +46,7 @@ A simple yet functional calculator application built with Flutter. This app prov
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/calculator-flutter.git
+git clone https://github.com/mehnafiz/calculator-flutter.git
 
 # Navigate to project directory
 cd calculator-flutter
