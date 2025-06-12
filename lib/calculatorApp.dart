@@ -1,8 +1,6 @@
-import 'dart:math';
-
 import 'package:calculator/widget/button.dart';
 import 'package:flutter/material.dart';
-
+import 'dart:math';
 class CalculatorApp extends StatefulWidget {
   const CalculatorApp({super.key});
 
@@ -54,7 +52,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
         if (_output != 'Error') {
           _history.add("$expression = $_output");
         }
-      } else if (value == 'rt') {
+      } else if (value == '√') {
         // Square root operation on current input
         double currentValue = double.tryParse(_input) ?? 0.0;
         if (currentValue < 0) {
@@ -66,7 +64,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
           _input = _output;
 
           // Add sqrt expression to history
-          _history.add("rt($currentValue) = $_output");
+          _history.add("√($currentValue) = $_output");
         }
         _ope = '';
       } else if (value == '+' || value == '-' || value == '*' || value == '/' || value == '%') {
@@ -227,7 +225,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
               buildButton(text: '0', onClick: () => buttonPress('0')),
               buildButton(text: '.', onClick: () => buttonPress('.')),
               buildButton(text: '=', onClick: () => buttonPress('='), color: Colors.green),
-              buildButton(text: 'rt', onClick: () => buttonPress('rt'), color: Colors.orangeAccent),
+              buildButton(text: '√', onClick: () => buttonPress('√'), color: Colors.orangeAccent),
 
             ],
           ),
